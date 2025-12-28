@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Experience the legend. An interactive 3D showcase of the Porsche 911 GT3 featuring a cinematic showroom, detailed specifications, and immersive audio." />
+  <meta name="keywords"
+    content="Porsche 911, 3D Showcase, WebGL, Three.js, Interactive Website, Car Showcase, Automative Design" />
+  <meta name="author" content="Bhavy Dave" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bhavydave.framer.website/" />
+  <meta property="og:title" content="Porsche 911 GT3 - Interactive 3D Experience" />
+  <meta property="og:description" content="Explore the legendary Porsche 911 in a fully immersive 3D showroom." />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1503376763036-066120622c74?q=80&w=2070&auto=format&fit=crop" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://bhavydave.framer.website/" />
+  <meta property="twitter:title" content="Porsche 911 GT3 - Interactive 3D Experience" />
+  <meta property="twitter:description" content="Explore the legendary Porsche 911 in a fully immersive 3D showroom." />
+  <meta property="twitter:image"
+    content="https://images.unsplash.com/photo-1503376763036-066120622c74?q=80&w=2070&auto=format&fit=crop" />
+
+  <title>Porsche 911 GT3 | Interactive 3D Showcase</title>
+  <link rel="canonical" href="https://bhavydave.framer.website/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-bar-container">
+      <div id="loading-bar"></div>
+    </div>
+  </div>
+
+  <!-- 3D Canvas -->
+  <div id="canvas-container"></div>
+
+  <!-- UI Overlay -->
+  <div id="ui-overlay">
+    <header>
+      <h1>Porsche 911 GT3</h1>
+      <p>Interactive Experience</p>
+    </header>
+
+    <div class="top-right-controls">
+      <button id="start-engine-btn" class="btn-start-stop">
+        <span class="btn-text">START</span>
+        <span class="btn-text-small">ENGINE</span>
+        <span class="btn-text-bottom">STOP</span>
+      </button>
+    </div>
+
+    <div class="footer-info">
+      <div class="details">
+        <p>Pure Performance</p>
+        <h2>The Legend</h2>
+      </div>
+      <div class="controls-hint">
+        <p>SCROLL TO EXPLORE</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scrollable Content Sections -->
+  <main id="content-sections">
+    <section class="info-section right" style="top: 100vh;">
+      <div class="card invisible-block">
+        <h3>Design</h3>
+        <p>Timeless silhouette with a swan-neck wing mounting that enhances downforce by keeping the airflow on the
+          underside of the clean.</p>
+      </div>
+    </section>
+
+    <section class="info-section left" style="top: 180vh;">
+      <div class="card invisible-block">
+        <h3>Cockpit</h3>
+        <p>A driver-focused interior with a Track Screen function that reduces displays to essential information for
+          maximum focus.</p>
+      </div>
+    </section>
+
+    <section class="info-section right" style="top: 250vh;">
+      <div class="card invisible-block">
+        <h3>Engineering</h3>
+        <p>Legendary rear-mounted 6-cylinder boxer engine. Available in <span
+            style="color: var(--color-accent)">RWD</span> or <span style="color: var(--color-accent)">AWD</span>.
+          featuring an <strong>8-speed PDK</strong> for instant shifts or a <strong>6-speed manual</strong> for
+          enthusiasts.</p>
+      </div>
+    </section>
+
+    <section class="info-section center" style="top: 320vh;">
+      <div class="card invisible-block">
+        <h3>Performance</h3>
+        <p><strong>Porsche 911 Carrera (Base)</strong><br>
+          3.0L Twin-Turbo Flat-6<br>
+          Power: <span style="color: var(--color-accent)">388 hp</span> / 450 Nm<br>
+          Top Speed: <span style="color: var(--color-accent)">294 km/h</span><br>
+          0-100 km/h: <span style="color: var(--color-accent)">3.9s</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="info-section right" style="top: 400vh;">
+      <div class="card invisible-block">
+        <h3>Innovation</h3>
+        <p><strong>New T-Hybrid System</strong><br>The 2025 GTS models feature an innovative performance hybrid system
+          with an electric turbocharger for zero lag.</p>
+      </div>
+    </section>
+    </div>
+
+    <footer class="info-section center" style="top: auto; bottom: 0; padding-bottom: 3rem;">
+      <div class="card invisible-block footer-card">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/bhavy-dave" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Bhavydeveloper77" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://bhavydave.framer.website/" target="_blank" title="Portfolio">
+            <i class="fas fa-globe"></i>
+            <span>Portfolio</span>
+          </a>
+        </div>
+        <p class="disclaimer">Excellence is an art won by training and habit.</p>
+        <p class="disclaimer-small">&copy; 2025 | This is a student project created for educational purposes only. All
+          assets and models used belong to their respective owners, with 3D models sourced from Sketchfab.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
